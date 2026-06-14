@@ -3,11 +3,12 @@ kind: Pod
 metadata:
   name: nginx
   labels:
+    env: production
     app: nginx
     tier: frontend
 spec:
   containers:
-   -name: nginx
-    image: nginx
-   -name: busybox
-    image: busybox
+   - name: nginx
+     image: nginx
+   - name: busybox
+     image: busybox
