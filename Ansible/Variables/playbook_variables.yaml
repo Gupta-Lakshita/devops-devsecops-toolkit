@@ -1,0 +1,23 @@
+- name: Set Firewall Configurations
+  hosts: web
+  tasks:
+
+    - firewalld:
+        service: https
+        permanent: true
+        state: enabled
+
+    - firewalld:
+        port: '{{ http_port }}'/tcp
+        permanent: true
+        state: disabled
+
+    - firewalld:
+        port: '{{ snmp_port }}'/udp
+        permanent: true
+        state: disabled
+
+    - firewalld:
+        source: '{{ inter_ip_range }}'/24
+        zone: internal
+        state: enabled

@@ -1,0 +1,33 @@
+- name: Create users
+  hosts: localhost
+  tasks:
+
+    - user: name='{{ item.name }}' state=present uid='{{ item.uid }}'
+
+      loop: #with_items:
+        - name: joe #- { name: joe, uid: 1010}
+          uid: 1010
+
+        - name: george
+          uid: 1011
+
+        - name: ravi
+          uid: 1012
+
+        - name: mani
+          uid: 1013
+
+        - name: kiran
+          uid: 1014
+
+        - name: jazlan
+          uid: 1015
+
+        - name: emaan
+          uid: 1016
+
+        - name: mazin
+          uid: 1017
+
+        - name: izaan
+          uid: 1018

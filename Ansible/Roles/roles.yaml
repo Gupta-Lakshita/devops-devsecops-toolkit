@@ -1,0 +1,26 @@
+- name: Install and Configure MySQL
+  hosts: db-server
+  roles:
+   #- geerlingguy.mysql
+    - role: geerlingguy.mysql
+      become: yes
+      vars:
+        mysql_user_name: db-user
+
+# all in one roles
+- name: Install and Configure MySQL
+  hosts: db-and-webserver
+  roles:
+    - geerlingguy.mysql
+    - nginx
+
+# distributed roles
+- name: Install and Configure MySQL
+  hosts: db-server
+  roles:
+    - geerlingguy.mysql
+
+- name: Install and Configure Web Server
+  hosts: web-server
+  roles:
+    - nginx

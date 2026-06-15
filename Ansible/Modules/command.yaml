@@ -1,0 +1,15 @@
+- name: Play 1
+  hosts: localhost
+  tasks:
+
+    - name: Execute command 'date'
+      command: date
+
+    - name: Display resolv.conf contents
+      command: cat /etc/resolv.conf
+
+    - name: Display resolv.conf contents
+      command: cat resolv.conf chdir=/etc
+
+    - name: Display resolv.conf contents
+      command: mkdir /folder creates=/folder

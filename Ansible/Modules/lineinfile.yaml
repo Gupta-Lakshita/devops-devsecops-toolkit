@@ -1,0 +1,6 @@
+- name: Add DNS server to resolv.conf
+  hosts: localhost
+  tasks:
+    - lineinfile:
+        path: /etc/resolv.conf
+        line: 'nameserver 10.1.250.10'

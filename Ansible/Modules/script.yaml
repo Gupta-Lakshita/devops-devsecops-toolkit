@@ -1,0 +1,5 @@
+- name: Play 1
+  hosts: localhost
+  tasks:
+    - name: Run a script on remote server
+      script: /some/local/script.sh -arg1 -arg2
