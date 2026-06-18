@@ -50,3 +50,10 @@ KCVSS: Kubernetes Common Configuration Scoring System
 
 Team communication and collaboration platform used for messaging, notifications, and workflow automation
 Used to send build, deployment, test, and security scan notifications.
+
+### 7. HashiCorp Vault
+
+Securely accessing secrets.
+(vault-helm)
+Key Shares (Minimum Threshold) -> Master Key -> Encryption Key
+Application -> Vault Agent -> Vault
