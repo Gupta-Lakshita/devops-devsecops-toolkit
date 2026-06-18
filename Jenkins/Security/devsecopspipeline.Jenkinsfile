@@ -1,3 +1,48 @@
+// Build
+// ↓
+// Unit Tests
+// ↓
+// Mutation Tests
+// ↓
+// SAST (SonarQube)
+// ↓
+// Docker Vulnerability Scan
+// ↓
+// Docker Build & Push
+// ↓
+// Kubernetes Vulnerability Scan
+// ↓
+// K8S Deployment - DEV
+// ↓
+// Integration Tests - DEV
+// ↓
+// OWASP ZAP - DAST
+// ↓
+// Promote to PROD?   <-- Manual Approval
+// ↓
+// K8S Deployment - PROD
+// ↓
+// Integration Tests - PROD
+// ↓
+// K8S CIS Benchmark
+// ↓
+// Post Actions (Slack, Reports)
+
+// Build Artifact - Maven
+// Unit Tests - JUnit and Jacoco
+// Mutation Tests - PIT
+// SonarQube - SAST
+// Vulnerability Scan - Docker
+// Docker Build and Push
+// Vulnerability Scan - Kubernetes
+// K8S Deployment - DEV
+// Integration Tests - DEV
+// OWASP ZAP - DAST
+// Promote to PROD?
+// K8S Deployment - PROD
+// Integration Tests - PROD
+// K8S CIS Benchmark
+
 pipeline {
     agent any
 
@@ -5,7 +50,7 @@ pipeline {
         deploymentName = "devsecops"
         containerName = "devsecops-container"
         serviceName = "devsecops-svc"
-        imageName = "siddharth67/numeric-app:${GIT_COMMIT}"
+        imageName = "lakshitag/numeric-app:${GIT_COMMIT}"
         applicationUrl = "http://devsecops-demo.eastus.cloudapp.azure.com/"
         applicationURI = "/increment/99"
     }
@@ -158,6 +203,67 @@ pipeline {
             steps {
                 withKubeConfig([credentialsId: 'kubeconfig']) {
                     sh 'bash zap.sh'
+                }
+            }
+        }
+
+        stage('Promote to PROD?') {
+            steps {
+                timeout(time: 2, unit: 'DAYS') {
+                    input 'Do you want to Approve the Deployment to Production Environment/Namespace?'
+                }
+            }
+        }
+
+        stage('K8S Deployment - PROD') {
+            steps {
+                parallel(
+                    "Deployment": {
+                        withKubeConfig([credentialsId: 'kubeconfig']) {
+                            sh "sed -i 's#replace#${imageName}#g' k8s_PROD-deployment_service.yaml"
+                            sh "kubectl -n prod apply -f k8s_PROD-deployment_service.yaml"
+                        }
+                    },
+                    "Rollout Status": {
+                        withKubeConfig([credentialsId: 'kubeconfig']) {
+                            sh "bash k8s-PROD-deployment-rollout-status.sh"
+                        }
+                    }
+                )
+            }
+        }
+
+        stage('Integration Tests - PROD') {
+            steps {
+                script {
+                    try {
+                        withKubeConfig([credentialsId: 'kubeconfig']) {
+                            sh "bash integration-test-PROD.sh"
+                        }
+                    } catch (e) {
+                        withKubeConfig([credentialsId: 'kubeconfig']) {
+                            sh "kubectl -n prod rollout undo deploy ${deploymentName}"
+                        }
+                        throw e
+                    }
+                }
+            }
+        }
+
+        stage('K8S CIS Benchmark') {
+            steps {
+                script {
+                    parallel(
+                        "Master": {
+                            sh "bash cis-master.sh"
+                        },
+                        "Etcd": {
+                            sh "bash cis-etcd.sh"
+                        },
+                        "Kubelet": {
+                            sh "bash cis-kubelet.sh"
+                        }
+                    )
                 }
             }
         }

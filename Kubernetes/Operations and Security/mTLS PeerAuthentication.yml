@@ -1,0 +1,42 @@
+# defines how traffic will be tunneled (or not to sidecar)
+
+# PERMISSIVE Mode
+apiVersion: security.istio.io/v1beta1
+kind: PeerAuthentication
+
+metadata:
+  name: default
+  namespace: istio-system
+
+spec:
+  mtls:
+    mode: PERMISSIVE
+
+# STRICT Mode
+apiVersion: security.istio.io/v1beta1
+kind: PeerAuthentication
+
+metadata:
+  name: default
+  namespace: foo
+
+spec:
+  mtls:
+    mode: STRICT
+
+# DISABLE Mode
+apiVersion: security.istio.io/v1beta1
+kind: PeerAuthentication
+
+metadata:
+  name: default
+  namespace: foo
+
+spec:
+  mtls:
+    mode: DISABLE
+
+# PERMISSIVE → Accepts both mTLS and non-mTLS traffic.
+# STRICT → Only mTLS traffic is allowed.
+# DISABLE → mTLS is disabled; only plain-text traffic is allowed.
+

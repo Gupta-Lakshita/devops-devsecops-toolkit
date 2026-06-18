@@ -1,0 +1,52 @@
+### 1. CIS Benchmarks (Centre for Internet Security) - kube-bench
+
+Best practice security reccomendations
+Running the checks documented in CIS Kubernetes Benchmarks 
+
+### 2. Istio
+
+(mSTL handshake)
+Connecting, securing, managing, monitoring microservices.
+NO CHANGE OF CODE
+SideCar proxies
+
+### 3. Kubernetes Monitoring Tools
+
+Dashboard
+Metrics Server
+CAdvisor and Heapster
+
+### Jaeger
+Jaeger is used for monitoring and troubleshooting microservices-based distributed systems.
+### Grafana
+Grafana is most commonly used for visualizing time series data for infrastructure and application analytics.
+### Prometheus
+Prometheus is a monitoring and alerting tool. It monitors multiple microservices running in your system.
+### Kiali
+Kiali works with Istio to visualise the service mesh topology, features like request rates.
+
+### 4. Falco
+Detects unexpected application behavior and alerts on threats at runtime.
+Monitors system calls, container activity, file access, network connections, and process execution.
+Helps identify attacks such as privilege escalation, unauthorized access, crypto mining, and container escapes.
+
+### 5. HELM
+
+Package manager for Kubernetes
+Creates new release (instance of a chart) for each installation
+
+### HEML Charts:
+Packages containing pre-configured Kubernetes resources such as:
+ConfigMaps
+Deployments
+Services
+
+### 5. Kube-Scan
+
+Risk Assessment Tool
+KCVSS: Kubernetes Common Configuration Scoring System
+
+### 6. Slack
+
+Team communication and collaboration platform used for messaging, notifications, and workflow automation
+Used to send build, deployment, test, and security scan notifications.

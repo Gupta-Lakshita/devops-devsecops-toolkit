@@ -1,0 +1,89 @@
+# Ingress Gateway:
+
+# Acts as a load balancer at the edge of the Istio service mesh.
+# Receives incoming HTTP, HTTPS, TCP, and other network traffic.
+# Defines which ports and protocols are exposed to external clients.
+# Does not perform traffic routing by itself.
+# Works together with Virtual Services to route traffic.
+# Similar to Kubernetes Ingress, but provides more advanced service mesh capabilities.
+
+# Virtual Service:
+
+# Defines how traffic is routed within the Istio service mesh.
+# Contains a set of routing rules evaluated in order.
+# Routes requests to specific service versions or destinations.
+# Supports traffic splitting (e.g., 90% v1, 10% v2).
+# Enables A/B testing, canary deployments, and blue-green deployments.
+# Works with Destination Rules to control traffic behavior.
+# Can route traffic based on:
+# URL path
+# Headers
+# Source
+# Request parameters
+# Other request attributes
+
+# Relationship:
+
+# Ingress Gateway = Entry Point
+# Virtual Service = Traffic Routing Rules
+
+# Flow:
+# Client Request
+#       |
+#       v
+# Ingress Gateway
+#       |
+#       v
+# Virtual Service
+#       |
+#       v
+# Destination Service (v1 / v2 / v3)
+
+apiVersion: networking.istio.io/v1beta1
+kind: Gateway
+
+metadata:
+  name: devsecops-gateway
+  namespace: prod
+
+spec:
+  selector:
+    istio: ingressgateway
+
+  servers:
+    - hosts:
+        - '*'
+      port:
+        name: http
+        number: 80
+        protocol: HTTP
+
+---
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+
+metadata:
+  name: devsecops-numeric
+  namespace: prod
+
+spec:
+  gateways:
+    - devsecops-gateway
+
+  hosts:
+    - '*'
+
+  http:
+    - match:
+        - uri:
+            prefix: /increment
+        - uri:
+            exact: /
+      route:
+        - destination:
+            host: devsecops-svc
+            port:
+              number: 8080
+
+# k apply -f istio-gateway-vs.yaml
+# k get vs,gateway -n prod
