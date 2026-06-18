@@ -1,0 +1,6 @@
+securityContext:
+    runAsUser: 100
+    readOnlyRootFilesystem: true
+    runAsNonRoot: true
+
+# usually under spec and containers
