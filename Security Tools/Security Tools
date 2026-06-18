@@ -1,0 +1,51 @@
+### 1. Maven:
+
+Software Project Management Tool (pom.xml)
+Automates a JAVA based project
+
+### 2. Talisman:
+
+Pre-Commit, Pre-Push Hooks in GitHub
+Checks that potential secrets and sensitive info don't get accidently committed
+
+### 3. Mutation Testing:
+
+PIT runs unit tests against automatically modified code
+Mutations are supposed to get killed
+
+### 4. SAST - SonarQube:
+
+Inspection of code
+
+### 5. Vulnerabilities:
+
+Scanning and assessment
+NVD, CVE, CVSS, CWE
+
+### 6. Dependency Check:
+
+Evaluates Dependencies
+
+### 7. Trivy:
+
+Vulnerability Scanner for containers and other artifacts
+
+### 8. OPA Conftest:
+
+Policy engine against configuration data
+Kubernetes Configurations, Terraform code, Dockerfile or any other config files.
+
+### 9. Kubesec:
+
+Kubernetes security scanner and analysis tool
+A single YAML file input, can connect multiple Kubernetes resources
+
+### 10. Integration Tests
+
+Determine if independently developed units of software work correctly when they are connected to each other
+Tests the basic correctness of the API by consuming the REST API after it has already been deployed
+
+### 11. DAST - OWASP ZAP
+
+Identifies security vulnerabilities by simulating external attacks on an application while the application is running
+OpenAI Specification
