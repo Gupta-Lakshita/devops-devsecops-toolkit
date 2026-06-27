@@ -1,0 +1,22 @@
+          DEVELOPMENT                               OPERATIONS
+
+ PLAN
+   │
+   ▼
+ CODE
+   │
+   ▼
+ BUILD
+   │
+   ▼
+ TEST
+   │
+   └──────────────► RELEASE ──────────────► DEPLOY
+                                               │
+                                               ▼
+                                            OPERATE
+                                               │
+                                               ▼
+                                            MONITOR
+                                               │
+                                               └──────────────► PLAN

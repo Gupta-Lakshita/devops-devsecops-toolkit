@@ -1,0 +1,39 @@
+### Security IN the pipeline
+Adopt Differential Scanning
+Centralised Management
+Data Correlation
+Policy as Code
+
+### Security OF the pipeline
+Attacks: PPE (Poisoned Pipeline Execution)
+Dependency Chain Abuse
+
+### Pipeline Protection
+* Infrastructure Security: 
+Filter traffic to prohibit unauthorised ingress/egress
+Runners
+
+* SLSA Framework: (Supply-chain Levels for Software Artifacts)
+
+Level 1 – Provenance
+Scripted build
+Build metadata generated
+
+Level 2 – Signed Provenance
+Provenance digitally signed
+Tamper-evident
+
+Level 3 – Hardened Builds
+Isolated, hermetic builds
+Strong CI/CD security
+
+Level 4 – Highest Assurance
+Maximum security
+For regulated/high-security environments
+
+* STRIDE 
+
+* Secret Management & Hiding
+Detection: Use pre-commit hooks to detect secrets before code is committed.
+OIDC: Use OpenID Connect for cloud authentication instead of storing long-lived access keys.
+Rotation: Automatically rotate secrets/credentials regularly to reduce compromise risk.

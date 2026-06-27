@@ -1,0 +1,134 @@
+### Risk Management Process
+
+**1. Threat Model**
+
+* Create system architecture model.
+* Identify possible threats and attack vectors.
+
+**2. Review Findings**
+
+* Validate findings with stakeholders.
+* Assess business risk and prioritize issues.
+
+**3. Report**
+
+* Document identified risks.
+* Include remediation plan, timeline, and cost/impact.
+
+**4. Manage (Risk Treatment)**
+
+* **Accept** – Live with the risk.
+* **Transfer** – Shift risk (e.g., insurance/third party).
+* **Mitigate** – Reduce likelihood or impact.
+* **Remediate** – Eliminate the vulnerability by fixing it.
+
+**Threat Model → Review Findings → Report → Manage (Accept / Transfer / Mitigate / Remediate)**
+
+### Types of Threat Modeling
+### 1. STRIDE (Microsoft)
+
+* **Purpose:** Identifies security threats.
+* **Acronym:**
+
+  * **S** – Spoofing (fake identity)
+  * **T** – Tampering (modify data)
+  * **R** – Repudiation (deny actions)
+  * **I** – Information Disclosure (data leak)
+  * **D** – Denial of Service (make service unavailable)
+  * **E** – Elevation of Privilege (gain higher access)
+
+### 2. OCTAVE (Operationally Critical Threat, Asset, and Vulnerability Evaluation)
+
+* **Purpose:** Asset and organizational risk assessment.
+* **Focus:** Business risks, assets, policies, vulnerabilities.
+
+### 3. PASTA (Process for Attack Simulation and Threat Analysis)
+
+* **Purpose:** Attacker-centric threat modeling.
+* **Focus:** Simulate attacks, prioritize risks, define mitigation.
+* **Asset-focused** with emphasis on mitigation strategies.
+
+### Thread Modelling
+1. Manual
+2. Tools
+3. Automatic
+4. Formal
+5. Graphical
+
+### Techniques
+### DREAD
+
+Risk rating model used to prioritize security threats.
+
+D – Damage: How much damage will the attack cause?
+R – Reproducibility: Can the attack be repeated easily?
+E – Exploitability: How easy is it to exploit?
+A – Affected Users: How many users/systems are impacted?
+D – Discoverability: How easy is it to find the vulnerability?
+
+### MITRE ATT&CK
+**Adversarial Tactics, Techniques, and Common Knowledge**
+
+* **Purpose:** Knowledge base of real-world cyberattack techniques.
+* **Developed by:** MITRE Corporation.
+* **Used for:** Threat detection, threat modeling, red teaming, incident response, and security assessment.
+
+**Core Components:**
+* **Tactics** – *Attacker's goal* (e.g., Initial Access, Persistence, Privilege Escalation).
+* **Techniques** – *How the attacker achieves the goal*.
+* **Sub-techniques** – More detailed methods of a technique.
+
+**Common Tactics**
+* Initial Access
+* Execution
+* Persistence
+* Privilege Escalation
+* Defense Evasion
+* Credential Access
+* Discovery
+* Lateral Movement
+* Collection
+* Command & Control (C2)
+* Exfiltration
+* Impact
+
+### Attack Trees
+
+Deciduous is an attack tree-based threat modeling tool used to model attacks, defenses, and security goals.
+Title → Facts → Attacks → Mitigations → Goals
+
+**Components:**
+Title – Name of the threat model/attack tree.
+Facts – System properties or assumptions (not attacks or defenses).
+Attacks – Actions an attacker performs.
+Mitigations – Security controls to prevent or reduce attacks.
+Goals – Attacker's final objective.
+
+### Attack Libraries
+### TRIKE: Trustworthiness Risk Identification and Knowledge Engine
+
+### Continuous Threat Modelling: Threat Dragon/Threagile:
+
+* **YAML file** – Single input source for the threat model.
+* **Business/Technical Overview** – Describe the application and its purpose.
+* **Security Questions** – Questions answered by developers for threat analysis.
+* **Abuse Cases & Security Requirements** – Possible attacks and required security controls.
+* **Risk Tracking** – Track identified risks.
+* **Data Assets** – Identify and classify important data.
+* **Technical Assets** – List components, services, and dependencies.
+* **Trust Boundaries** – Define trust zones between system components.
+* **Custom Risks** – Document environment-specific or unique risks.
+
+**YAML → Overview → Questions → Abuse Cases → Risk Tracking → Data Assets → Technical Assets → Trust Boundaries → Custom Risks**
+
+### Cloud Threat Modeling
+
+**Scope → Assets → Threats → Controls → Rating → Mitigation**
+
+* **Scope:** IAM, Configurations
+* **Assets:** Data, Keys, SaaS
+* **Threats:** Insiders, Cross-account, Misconfiguration
+* **Controls:** Built-in, Marketplace, Frameworks
+* **Rating:** Prioritize account compromise
+* **Mitigation:** CSP-specific controls
+

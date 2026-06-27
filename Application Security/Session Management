@@ -1,0 +1,86 @@
+Pre & Post Authentication Session IDs
+
+### Session Cookies – Best Practices
+
+* **Secure Flag**
+
+  * HTTPS only
+  * Prevents eavesdropping
+  * Session sniffing protection
+
+* **HttpOnly Flag**
+
+  * No JavaScript access
+  * Prevents XSS cookie theft
+  * Client-side protection
+
+* **No Max-Age / Expires**
+
+  * Session cookie
+  * Deleted on browser close
+  * Avoid persistent cookies
+
+### Federated Identity 
+
+* Links a user's identity across multiple identity providers or systems.
+
+**Single Sign-On (SSO)**
+* One login lets users access multiple applications using the same authentication token.
+
+**Federation**
+* Enables identity information to be securely shared and trusted across different organizations or security domains.
+
+### Java Session Management
+URL Rewrite
+
+### .NET Session Management
+
+**Modes:**
+* **InProc** – Stores session data in the web server's memory (default, fastest).
+* **StateServer** – Stores session data in a separate state server's memory for better reliability.
+* **SQLServer** – Stores session data in a SQL Server database, allowing persistence and web farm support.
+* **Custom** – Uses a custom session storage provider defined by the developer.
+* **Off** – Disables session state management completely.
+
+### JSON Web Token: JWT
+
+Authorisation
+Info Exchange
+* **Signed Tokens** – Verify the sender's identity (authenticity).
+* **Hashed Data** – Verify that the content has not been modified (integrity).
+
+### JWT Structure
+
+* **JWT Format** – `Header.Payload.Signature`
+
+* **Header** – Token type (JWT) + Signing algorithm (HS256, RSA).
+
+* **Payload** – Contains claims (user information and metadata).
+
+  * **Registered Claims** – Standard claims (iss, exp, sub, aud).
+  * **Public Claims** – Shared/custom claims.
+  * **Private Claims** – Application-specific claims.
+
+* **Signature** – Verifies authenticity and ensures token integrity using the header, payload, secret/private key, and algorithm.
+
+### JSON Web Encryption: JWE
+
+* **Purpose** – Encrypts data to ensure confidentiality.
+* **Integrity** – Protects data from tampering (when combined with signing).
+* **Web Communication** – Used in HTTP Authorization headers and API communication.
+* **Secure Data Transfer** – Protects sensitive information during transmission.
+* **Use Cases** – Authentication tokens, financial data, healthcare records, e-commerce, secure APIs.
+
+### OAuth Authorization
+
+* **OAuth** – Authorization framework (not authentication).
+* **Decouples AuthN & AuthZ** – Separates authentication from authorization.
+* **Delegated Authorization** – Grants limited access without sharing passwords.
+* **REST APIs** – Commonly used for API authorization.
+* **Scopes** – Define what resources/actions are allowed.
+* **Access Token** – Issued after user consent to access resources.
+* **Authorization Server** – Authenticates user and issues access tokens.
+* **Resource Server** – Hosts protected resources accessed using the token.
+* **Third-party Apps** – Access user data with permission.
+* **Supports** – Web apps, mobile apps, server-to-server apps, browser apps, smart devices/TVs.
+* **Refresh Token** - Long lived

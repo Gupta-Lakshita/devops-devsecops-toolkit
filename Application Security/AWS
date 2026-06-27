@@ -1,0 +1,67 @@
+### AWS Well-Architectured Framework
+### Security Pillars
+
+* **IAM** – Identity and Access Management: Users, Roles, Permissions, Least Privilege
+* **Detection Controls** – Monitoring, Logging, CloudTrail, AWS Config
+* **Infrastructure Protection** – VPC, Security Groups, Network ACLs
+* **Data Protection** – Encryption (at rest/in transit), AWS KMS
+* **Incident Response** – Response Plan, Roles & Responsibilities
+* **Application Security** – Secure Coding, Security Testing, Vulnerability Protection
+
+### IAM Policies
+
+1. Managed
+2. Inline
+
+- **Version** – Policy language version
+- **Statement** – List of policy rules
+- **Effect** – Allow / Deny
+- **Action** – AWS operation (e.g., `s3:GetObject`)
+- **Resource** – Target AWS resource (ARN)
+
+### AWS Infrastructure Protection
+
+* **Regions & Availability Zones (AZs)** – High availability, fault tolerance
+* **AWS Local Zones** – Low latency, closer to users
+* **AWS Outposts** – AWS infrastructure on-premises (hybrid cloud)
+
+### AWS Compute Protection
+
+* **Amazon GuardDuty** – Continuous threat detection
+* **VPC Flow Logs** – Network traffic logging & visibility
+* **VPC Traffic Mirroring** – Replicates network traffic for monitoring and analysis
+
+### Data Protection in Transit
+
+* **AWS PrivateLink** – Private, secure connectivity between VPCs/on-premises and AWS services.
+* **Benefit** – Keeps traffic on the AWS backbone, reducing exposure to threats.
+
+### AWS Services for Data in Transit
+
+* **AWS Certificate Manager (ACM)** – Manages SSL/TLS certificates.
+* **Amazon VPC** – Private networking, Security Groups, ACLs.
+* **NLB / ALB** – SSL/TLS termination and secure traffic routing.
+* **AWS Direct Connect & VPN** – Secure encrypted connectivity to AWS.
+* **Amazon CloudFront** – CDN with SSL/TLS encryption.
+* **AWS Transit Gateway** – Centralized secure connectivity between VPCs and VPNs.
+
+### Incident Response (AWS)
+
+* **CloudTrail** – API activity logging & auditing
+* **AWS Config** – Resource configuration & compliance tracking
+* **AWS Security Hub** – Centralized security findings
+* **Amazon GuardDuty** – Continuous threat detection
+* **AWS Systems Manager** – Automation, patching & resource management
+* **AWS Incident Manager** – Incident coordination & automated response
+* **Amazon Detective** – Root cause analysis & security investigation
+
+### Application Security Implementation (AWS)
+
+* **Automated Testing & Scanning** – Detect vulnerabilities
+* **Penetration Testing** – Regular security testing *(AWS approval may be required)*
+* **AWS CodeGuru** – Automated code reviews
+* **AWS CodeArtifact** – Secure package & dependency management
+* **AWS CloudFormation** – Infrastructure as Code (IaC)
+* **AWS CodePipeline & CodeBuild** – Secure CI/CD automation
+* **AWS Config & Security Hub** – Continuous security monitoring
+* **Security Culture** – Shared ownership & continuous improvement

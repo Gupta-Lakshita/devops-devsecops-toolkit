@@ -1,0 +1,50 @@
+### Threat Prioritisation:
+
+* **Severity Assessment** – Measures the impact/severity of a vulnerability (Low, Medium, High, Critical).
+* **Likelihood of Occurrence** – Estimates how likely the vulnerability is to be exploited.
+* **Contextual Evaluation** – Considers the organization's environment, assets, and business impact to determine the actual risk.
+
+### FAIR (Factor Analysis of Information Risk)
+
+Quantitative risk assessment model.
+* **Purpose** – Measures cyber risk in financial terms.
+* **Focus** – Probability of loss events + monetary impact.
+
+### FAIR Model
+
+* **Risk = Loss Event Frequency (LEF) × Loss Event Magnitude (LEM)**
+
+**Loss Event Frequency (LEF)**
+* Likelihood of a threat occurring.
+* Threat capability vs. control strength.
+* Measured as probability/frequency.
+
+**Loss Event Magnitude (LEM)**
+* Financial impact of a loss event.
+* **Primary Loss** – Direct operational/financial costs.
+* **Secondary Loss** – Indirect costs (reputation, legal, regulatory).
+* Measured in **dollars**.
+
+## OWASP Risk Rating Methodology
+
+* **Purpose** – Risk assessment framework for web applications.
+* **Formula** – **Risk = Likelihood × Impact**.
+
+**Steps:**
+
+1. **Identify the risk**.
+2. **Estimate likelihood** (how likely it is to occur).
+3. **Estimate impact** (damage if it occurs).
+4. **Determine severity** (Low/Medium/High/Critical).
+5. **Prioritize fixes** (fix highest risks first).
+6. **Customize** the model to organizational needs.
+
+## CIS RAM (Center for Internet Security Risk Assessment Method)
+
+* **Purpose** – Cybersecurity risk assessment based on CIS Controls.
+* **Focus** – Balances **risk reduction** with **business impact**.
+* **Formula** – **Risk = Max(Mission Impact, Objectives Impact, Obligations Impact) × Likelihood**.
+* **Considers safeguard risks** – Avoids excessive security controls ("burdens").
+* **Goal** – Choose controls that reduce risk without harming business operations.
+
+### Security Controls

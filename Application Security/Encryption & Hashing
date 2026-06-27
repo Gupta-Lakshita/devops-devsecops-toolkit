@@ -1,0 +1,49 @@
+### Symmetric Encryption
+
+* Uses **one secret/shared key** for both encryption and decryption.
+* Fast and efficient for encrypting large amounts of data.
+* Mainly used for data storage and secure communication.
+* **AES, 3DES, Blowfish, RC6**.
+
+### Asymmetric Encryption
+
+* Uses **two keys**: **Public Key** (encrypt) and **Private Key** (decrypt).
+* Slower than symmetric encryption.
+* Used for authentication, digital signatures, and secure key exchange.
+* **RSA, ECC, DSA, Diffie-Hellman**.
+
+### Hash Attacks
+
+* Collision Attack: Finds two different inputs that generate the same hash value.
+* Preimage Attack: Given a hash, finds the original input that produced it.
+* Second Preimage Attack: Finds a different input with the same hash as a known input.
+* Dictionary Attack: Uses a precomputed list of common passwords and hashes to crack passwords.
+* Rainbow Table Attack: Uses precomputed hash tables to crack passwords faster with less computation.
+* Birthday Attack: Exploits the Birthday Paradox to find hash collisions more efficiently.
+
+### Digital Certificate
+
+### PKI: Public Key Infrastructure
+
+* Certificate Authority (CA): Issues and manages digital certificates.
+* Registration Authority (RA): Verifies user identity before a certificate is issued.
+* Certificate Database: Stores certificates and their validity information.
+* Central Directory: Repository that stores and provides access to public keys/certificates.
+* Certificate Management System: Manages certificate issuance, renewal, revocation, and distribution.
+
+### Certificate Based Authentication
+
+### Password Management
+
+**How Passwords are Stored:**
+* Hashing: Password is converted into a one-way hash before storage.
+* Salting: A random salt is added before hashing to make each hash unique and prevent rainbow table attacks.
+* Peppering: A secret value (pepper), stored separately from the database (e.g., in the application/server), is added before hashing to provide an extra layer of security.
+* Storing: Only the hash + salt are stored in the database; the pepper is never stored with the password.
+* Verification: During login, the entered password is combined with the same salt and pepper, hashed again, and compared with the stored hash. If they match, access is granted.
+
+**Entropy**
+Password strength
+Measured in bits
+Higher entropy = More secure
+Increase by using longer, random, diverse characters

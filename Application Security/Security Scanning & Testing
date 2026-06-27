@@ -1,0 +1,39 @@
+### SAST (Static Application Security Testing)
+
+* Tests **source code** without executing it.
+* Finds vulnerabilities early (during development).
+
+### DAST (Dynamic Application Security Testing)
+
+* Tests the **running application** from the outside.
+* Detects runtime vulnerabilities (black-box testing).
+
+### IAST (Interactive Application Security Testing)
+
+* Combines **SAST + DAST** using runtime instrumentation.
+* Identifies vulnerabilities with high accuracy.
+
+### ASPM (Application Security Posture Management)
+
+* Centralizes and manages application security risks.
+* Prioritizes vulnerabilities across tools.
+
+### RASP (Runtime Application Self-Protection)
+
+* Embedded in the application.
+* Detects and blocks attacks in real time.
+
+### WAF (Web Application Firewall)
+
+* Filters and monitors HTTP/HTTPS traffic.
+* Blocks common web attacks (e.g., SQLi, XSS).
+
+### Penetration Testing
+
+* Simulated attack to find exploitable vulnerabilities.
+* Performed manually or with tools.
+
+### Fuzz Testing
+
+* Sends random/malformed inputs to the application.
+* Identifies crashes, bugs, and security flaws.

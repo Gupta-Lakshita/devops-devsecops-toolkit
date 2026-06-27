@@ -1,0 +1,17 @@
+### OWASP LLMSecOps
+
+* Provides security best practices for developing and deploying **LLMs**.
+* Covers the AI lifecycle: development, deployment, and monitoring.
+
+### AI RMF (Risk Management Framework) Core & Playbook
+
+* Govern
+* Map
+* Measure
+* Manage
+
+### MITRE ATLAS
+
+* **MITRE ATLAS (Adversarial Threat Landscape for Artificial-Intelligence Systems)** is a knowledge base of AI attack techniques.
+* Helps understand AI threats and defenses.
+

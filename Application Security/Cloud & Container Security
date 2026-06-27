@@ -7,4 +7,158 @@
 ### Shared Responsibilty Model
 CSP and Users
 
-### 
+### Container Protection Best Practices
+
+* **Update Images** – Apply latest security patches.
+* **Least Privilege** – Minimize container permissions.
+* **Secure Registries** – Store/distribute images securely.
+* **Network Segmentation** – Isolate containers and host.
+* **Runtime Security** – Vulnerability scanning, monitoring & protection.
+* **Image Scanning & Signing** – Scan for CVEs and verify digital signatures.
+
+* **Harden** – Secure container runtime configuration.
+* **RBAC** – Control Kubernetes/container access.
+* **Assess** – Regular security audits & assessments.
+* **Integrate** – Security scanning in CI/CD.
+* **Monitor** – Logging & runtime monitoring.
+* **Educate** – Secure coding & container security training.
+
+## Cloud Security (AWS vs Azure vs GCP)
+
+* Shared Responsibility Model
+* IAM
+* Network Security
+* Encryption & Key Management
+* Threat Detection & Monitoring
+* Compliance & Certifications
+* AWS Shield, Azure Key Vault, Google Cloud Armor
+* Secrets Management
+* VPN & Secure Connectivity
+* Data at Rest & Data in Transit
+
+--- 
+
+### AWS, Azure, GCP
+
+## Identity & Access Management (IAM)
+
+### Azure
+
+* Azure Active Directory (Entra ID)
+* MFA
+* RBAC
+* Conditional Access
+
+### AWS
+
+* AWS IAM
+* MFA
+* Roles & Policies
+* Centralized Access Management
+
+---
+
+## Network Security
+
+### Azure
+
+* Virtual Network (VNet)
+* Network Security Groups (NSGs)
+* DDoS Protection
+
+### AWS
+
+* VPC
+* Security Groups
+* Network ACLs
+* DDoS Protection (AWS Shield)
+
+---
+
+## Encryption & Key Management
+
+### Azure
+
+* Azure Key Vault
+* Disk Encryption
+* Storage Service Encryption
+* Encryption at Rest & In Transit
+
+### AWS
+
+* AWS KMS
+* S3 Encryption
+* RDS Encryption
+* Encryption at Rest & In Transit
+
+---
+
+## Compliance & Certifications
+
+### Azure
+
+* ISO 27001
+* SOC 1
+* SOC 2
+* HIPAA
+* GDPR
+
+### AWS
+
+* PCI DSS
+* HIPAA
+* SOC 1
+* SOC 2
+* GDPR
+
+---
+
+## Threat Detection & Monitoring
+
+### Azure
+
+* Azure Security Center (Defender for Cloud)
+* ML-based Threat Detection
+* Risk Remediation
+
+### AWS
+
+* AWS Security Services
+* Machine Learning
+* Proactive Threat Detection
+
+---
+
+## Shared Responsibility Model
+
+### GCP
+
+* Shared Responsibility
+* Organization-wide Logging
+
+### AWS
+
+* Customer: Security **in** the Cloud
+* AWS: Security **of** the Cloud
+* Physical Infrastructure
+* Networking
+* Storage
+
+---
+
+## Security Features & Services
+
+### GCP
+
+* Google Cloud Armor
+* Identity-Aware Proxy (IAP)
+
+### AWS
+
+* AWS Shield
+* AWS Secrets Manager
+* DDoS Protection
+* Secrets Management
+
+
+
