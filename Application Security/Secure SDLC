@@ -1,0 +1,16 @@
+### OpenCRE (Common Requirements Enumeration)
+
+- Purpose:
+Solves the mapping problem across different security standards.
+Provides a common language to compare security frameworks.
+- Functionality:
+Maps security standards to Common Requirements (CREs).
+Makes it easier to find related requirements across frameworks.
+Improves shared understanding and maintains links between standards.
+
+### NIST Secure Software Development Framework (SSDF)
+### NIST Cybersecurity Framework (CSF)
+### NIST Risk Management Framework (RMF)
+
+### CSA (Cloud Security Alliance) Security Guidance
+### CSA CCM (Cloud Controls Matrix)

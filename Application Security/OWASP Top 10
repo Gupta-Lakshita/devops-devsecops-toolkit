@@ -1,0 +1,68 @@
+### OWASP Top 10
+
+* **A01: Broken Access Control** – Users can access resources or perform actions beyond their permissions.
+* **A02: Cryptographic Failures** – Weak or improper encryption exposes sensitive data.
+* **A03: Injection** – Malicious input is executed as commands or queries (e.g., SQL Injection).
+* **A04: Insecure Design** – Security flaws caused by poor application design and architecture.
+* **A05: Security Misconfiguration** – Insecure settings or default configurations expose the application.
+* **A06: Vulnerable & Outdated Components** – Using outdated or vulnerable libraries, frameworks, or software.
+* **A07: Identification & Authentication Failures** – Weak authentication or session management allows account compromise.
+* **A08: Software & Data Integrity Failures** – Untrusted software updates or data compromise application integrity.
+* **A09: Security Logging & Monitoring Failures** – Insufficient logging and monitoring delay detection and response to attacks.
+* **A10: Server-Side Request Forgery (SSRF)** – Tricks the server into making unintended requests to internal or external systems.
+
+### Types of Injection
+### SQL Injection (SQLi)
+
+* Injects malicious SQL queries through user input to manipulate a **SQL database**.
+* Can read, modify, delete data or bypass authentication.
+
+### NoSQL Injection
+
+* Injects malicious queries into **NoSQL databases** (e.g., MongoDB, CouchDB).
+* Exploits weak input validation to bypass authentication or access data.
+
+### OS Command Injection
+
+* Executes arbitrary **operating system commands** through vulnerable application inputs.
+* Can lead to full server compromise if the app runs with high privileges.
+
+### LDAP Injection
+
+* Injects malicious input into **LDAP (Lightweight Directory Access Protocol)** queries.
+* Can bypass authentication or retrieve unauthorized directory information.
+
+### Template Injection (SSTI)
+
+* Injects malicious code into **server-side template engines** (e.g., Jinja2, Twig, Freemarker).
+* May lead to remote code execution, data leakage, or server compromise.
+
+### Error Handling Vulnerabilities
+
+* **Information Leakage** – Detailed error messages or stack traces expose internal paths, code, or system details to attackers.
+* **Fail Open** – On failure, the application **allows access** instead of denying it, potentially granting unauthorized privileges.
+* **Logic Corruption** – Errors (e.g., race conditions or incomplete transactions) leave the application/database in an inconsistent or exploitable state.
+
+### Other OWASP Top 10 Lists
+
+* **API Security Top 10** – Top API security risks.
+* **Data Security Top 10** – Top data security risks.
+* **Low-Code/No-Code Top 10** – Security risks in low-code/no-code platforms.
+* **Mobile Top 10** – Top mobile application security risks.
+* **Serverless Top 10** – Security risks in serverless architectures.
+* **CI/CD Security Top 10** – Top security risks in CI/CD pipelines.
+* **LLM Top 10** – Security risks in deploying and managing Large Language Model (LLMs).
+
+### OWASP API Security Top 10
+
+* **Broken Object Level Authorization (BOLA)** – Unauthorized access to other users' objects/resources.
+* **Broken Authentication** – Weak authentication allows account compromise.
+* **Excessive Data Exposure** – API returns more data than necessary.
+* **Lack of Resource & Rate Limiting** – No limits on requests/resources (DoS, brute force).
+* **Broken Function Level Authorization (BFLA)** – Unauthorized access to privileged API functions.
+* **Mass Assignment** – User modifies unintended object properties via request data.
+* **Security Misconfiguration** – Insecure/default configurations expose APIs.
+* **Injection** – Malicious input executes unintended commands or queries.
+* **Improper Assets Management** – Unmanaged/old API versions expose vulnerabilities.
+* **Insufficient Logging & Monitoring** – Poor detection and response to attacks.
+

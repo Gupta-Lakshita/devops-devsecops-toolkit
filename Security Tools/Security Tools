@@ -33,7 +33,7 @@ Vulnerability Scanner for containers and other artifacts
 ### 8. OPA Conftest:
 
 Policy engine against configuration data
-Kubernetes Configurations, Terraform code, Dockerfile or any other config files.
+Kubernetes Configurations, Terraform code, Dockerfile or any other config files
 
 ### 9. Kubesec:
 

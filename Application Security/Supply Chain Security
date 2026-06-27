@@ -1,0 +1,35 @@
+### Software Supply Chain Security Best Practices
+
+* **SBOMs** – Implement **Software Bill of Materials**.
+* **Provenance Validation** – Verify digital signatures & checksums.
+* **Source Control** – Never run scripts from unknown sources.
+* **Pin Dependencies** – Lock dependency versions; don't trust `latest`.
+* **Least Privilege** – Restrict who can publish packages.
+* **Configuration Security** – Validate IaC and isolate build infrastructure.
+* **Scan Beyond CVEs** – Detect malware & suspicious behavior.
+* **Drift Detection** – Monitor unexpected changes in build artifacts.
+* **Maintainer Health** – Block abandoned/zombie packages.
+
+### CAPEC
+
+**Common Attack Pattern Enumeration and Classification**
+A catalog of common attack techniques and patterns used by attackers.
+
+### CNCF
+
+**Cloud Native Computing Foundation**
+An organization that promotes and maintains cloud-native technologies like Kubernetes, Prometheus, and Envoy.
+
+### SCA
+
+**Software Composition Analysis**
+A security process that identifies open-source dependencies, known vulnerabilities (CVEs), licenses, and outdated components in an application.
+
+### OWASP Dependency 
+
+An **SCA (Software Composition Analysis)** tool that scans project dependencies for **known vulnerabilities (CVEs)** by checking public vulnerability databases.
+
+### SLSA
+
+**Supply-chain Levels for Software Artifacts**
+A security framework that improves software supply chain integrity by defining levels of build, provenance, and release security.

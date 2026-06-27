@@ -1,0 +1,38 @@
+### Threat Actors (Easiest → Hardest to Defend)
+
+Script Kiddie – Uses existing tools/scripts; least skilled.
+Hacktivist – Attacks for political/social causes.
+Insider – Authorized user abusing access.
+Hacker – Skilled attacker exploiting vulnerabilities.
+Cybercriminal – Financially motivated attacker.
+Advanced Persistent Threat (APT) – Highly skilled, organized, long-term attacks (hardest to defend).
+
+Note: As attacker sophistication increases, defense becomes harder and attacks become less common.
+
+* **CVE** – **Common Vulnerabilities and Exposures**
+
+  * Public catalog of known security vulnerabilities.
+
+* **CVSS** – **Common Vulnerability Scoring System**
+
+  * Standard system for rating the severity of vulnerabilities (0.0–10.0).
+
+* **EPSS** – **Exploit Prediction Scoring System**
+
+  * Predicts the likelihood that a vulnerability will be exploited in the wild.
+
+* **CWE** – **Common Weakness Enumeration**
+
+  * Catalog of common software/hardware weaknesses that can lead to vulnerabilities.
+
+* **SSVC** - **Stakeholder-Specific Vulnerability Categorization**
+
+* **CVE** = **What** is vulnerable.
+* **CWE** = **Why** the vulnerability exists (coding/design weakness).
+* **CVSS** = **How severe** the vulnerability is.
+* **EPSS** = **How likely** it is to be exploited.
+* **SSVC** = Helps **prioritize** whether and how urgently to remediate a vulnerability.
+
+### Server-Side Request Forgery (SSRF)
+
+SSRF is a web security vulnerability where an attacker tricks a server into sending HTTP requests to another server or resource chosen by the attacker.

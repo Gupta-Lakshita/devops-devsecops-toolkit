@@ -1,0 +1,15 @@
+Content Security Policy:
+#usually as http header:
+
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=UTF-8
+Content-Security-Policy: default-src 'self'; script-src 'self' https://apis.google.com; style-src 'self' https://fonts.googleapis.com; img-src 'self' data:; connect-src 'self' https://api.example.com; frame-src 'self' https://player.vimeo.com; report-uri /csp-report-endpoint; block-all-mixed-content;
+
+default-src – Default source for all resources.
+script-src – Allowed JavaScript sources.
+style-src – Allowed CSS sources.
+img-src – Allowed image sources.
+connect-src – Allowed AJAX, Fetch, WebSocket endpoints.
+frame-src – Allowed iframe sources.
+report-uri – Endpoint for CSP violation reports.
+block-all-mixed-content – Blocks HTTP resources on HTTPS pages.
