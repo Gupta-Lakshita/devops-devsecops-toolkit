@@ -1,0 +1,40 @@
+### Secure Design & Coding
+
+* Perform **threat modeling** early.
+* Use **secure defaults** in the IDE.
+* Complete **secure coding training**.
+* Follow **secure reference architectures**.
+* Use security requirements from established frameworks.
+* Integrate **SAST** and **SCA** into the IDE/SDLC.
+* Work closely with the **security team**.
+* Conduct **secure code reviews**.
+* Reuse trusted, secure components.
+* Store and manage **secrets securely**.
+
+---
+
+### Secure Testing
+
+* Integrate **SAST** and **SCA** early.
+* Use **DAST** and **IAST** on running applications.
+* Deploy **WAF** and **RASP** in production.
+* Have a **patch management** process.
+* Test patches before deployment.
+* Handle **false positives** effectively.
+* Tune security tools based on findings.
+* Understand each tool's strengths and limitations.
+
+---
+
+### Security Basics
+
+* Never trust user input.
+* Use secure defaults and hardened servers.
+* Encrypt application secrets.
+* Never hardcode secrets.
+* Use secure authentication frameworks.
+* Log sensitive business flows.
+* Protect data **in transit, at rest, and in use**.
+* Keep designs simple to reduce attack surface.
+* Apply **defense in depth**.
+* Fix the **root cause**, not just the symptom.
